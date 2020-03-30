@@ -9,6 +9,12 @@ MyString::MyString() {
 	std::strcat(str, "/0");
 }
 
+// Single-arg constructor
+MyString::MyString(char *str) 
+	:str(str) {
+
+}
+
 // Equality
 bool MyString::operator==(const MyString &rhs) const {
 
