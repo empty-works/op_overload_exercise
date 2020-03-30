@@ -5,6 +5,9 @@ class MyString {
 private:
 	char *str {};
 public:
+	// No-arg constructor
+	MyString(){}
+	
 	MyString operator-() const;
 	bool operator==(const MyString &rhs) const;
 	bool operator!=(const MyString &rhs) const;

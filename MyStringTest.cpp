@@ -3,6 +3,8 @@
 
 int main() {
 
-
+	MyString my_object {};
+	// Testing for equality
+	
 	return 0;
 }
