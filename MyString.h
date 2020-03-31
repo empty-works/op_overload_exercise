@@ -8,7 +8,9 @@ public:
 	// No-arg constructor
 	MyString();
 	// Single-arg constructor
-	MyString(const char *str);	
+	MyString(const char *str);
+	// Copy constructor
+ 	MyString(const MyString &rhs);	
 	MyString operator-() const;
 	bool operator==(const MyString &rhs) const;
 	bool operator!=(const MyString &rhs) const;
@@ -19,5 +21,5 @@ public:
 	MyString operator*(const MyString &rhs) const;
 	MyString operator*=(const MyString &rhs) const;
 
-	char *get_str();
+	char *get_str() const;
 };

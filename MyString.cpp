@@ -15,6 +15,12 @@ MyString::MyString(const char *str) {
 	std::strcpy(this->str, str);
 }
 
+// Copy constructor
+MyString::MyString(const MyString &rhs) {
+
+	*str = *(rhs.str);
+}
+
 // Equality
 bool MyString::operator==(const MyString &rhs) const {
 
@@ -27,7 +33,7 @@ bool MyString::operator!=(const MyString &rhs) const {
 	return (this->str != rhs.str);
 }
 
-char *MyString::get_str() {
+char *MyString::get_str() const {
 
 	return str;
 }
