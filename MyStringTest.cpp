@@ -10,6 +10,9 @@ int main() {
 	MyString copy_con{single_arg_con};
 	std::cout << "Testing copy constructor..." << copy_con.get_str() << std::endl;
 	MyString move_con{MyString{"Move con test"}};
-	std::cout << "Testing move constructor..." << move_con.get_str() << std::endl;	
+	std::cout << "Testing move constructor..." << move_con.get_str() << std::endl;
+	
+	// Testing for equality
+	std::cout << "Test for equality..." << (move_con == move_con) << std::endl;	
 	return 0;
 }
