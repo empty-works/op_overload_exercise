@@ -8,11 +8,11 @@ public:
 	// No-arg constructor
 	MyString();
 	// Single-arg constructor
-	MyString(const char *str);
+	MyString(const char *in_str);
 	// Copy constructor
  	MyString(const MyString &rhs);
 	// Move constructor
-	MyString(const MyString &&rhs);
+	MyString(MyString &&rhs);
 
 	MyString operator-() const;
 	bool operator==(const MyString &rhs) const;

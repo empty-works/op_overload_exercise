@@ -10,9 +10,9 @@ MyString::MyString() {
 }
 
 // Single-arg constructor
-MyString::MyString(const char *str) {
-
-	std::strcpy(this->str, str);
+MyString::MyString(const char *in_str) {
+	
+	*str = *in_str;
 }
 
 // Copy constructor
@@ -22,7 +22,7 @@ MyString::MyString(const MyString &rhs) {
 }
 
 // Move constructor
-MyString::MyString(const MyString &&rhs) {
+MyString::MyString(MyString &&rhs) {
 
 	str = rhs.str;
 	rhs.str = nullptr;
