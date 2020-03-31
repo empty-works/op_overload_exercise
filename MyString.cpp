@@ -19,7 +19,8 @@ MyString::MyString(const char *in_str) {
 // Copy constructor
 MyString::MyString(const MyString &rhs) {
 
-	*str = *(rhs.str);
+	str = new char[std::strlen(rhs.str) + 1];
+	std::strcpy(str, rhs.str);
 }
 
 // Move constructor

@@ -7,5 +7,7 @@ int main() {
 	std::cout << "Testing no-arg constructor..." << no_arg_con.get_str() << std::endl; 
 	MyString single_arg_con{"Testing"};
 	std::cout << "Testing single arg constructor..." << single_arg_con.get_str() << std::endl;
+	MyString copy_con{single_arg_con};
+	std::cout << "Testing copy constructor..." << copy_con.get_str() << std::endl;	
 	return 0;
 }
