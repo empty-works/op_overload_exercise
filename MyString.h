@@ -10,7 +10,10 @@ public:
 	// Single-arg constructor
 	MyString(const char *str);
 	// Copy constructor
- 	MyString(const MyString &rhs);	
+ 	MyString(const MyString &rhs);
+	// Move constructor
+	MyString(const MyString &&rhs);
+
 	MyString operator-() const;
 	bool operator==(const MyString &rhs) const;
 	bool operator!=(const MyString &rhs) const;

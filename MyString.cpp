@@ -21,6 +21,13 @@ MyString::MyString(const MyString &rhs) {
 	*str = *(rhs.str);
 }
 
+// Move constructor
+MyString::MyString(const MyString &&rhs) {
+
+	str = rhs.str;
+	rhs.str = nullptr;
+}
+
 // Equality
 bool MyString::operator==(const MyString &rhs) const {
 
