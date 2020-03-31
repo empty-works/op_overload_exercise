@@ -10,9 +10,9 @@ MyString::MyString() {
 }
 
 // Single-arg constructor
-MyString::MyString(char *str) 
-	:str(str) {
+MyString::MyString(const char *str) {
 
+	std::strcpy(this->str, str);
 }
 
 // Equality
@@ -25,4 +25,9 @@ bool MyString::operator==(const MyString &rhs) const {
 bool MyString::operator!=(const MyString &rhs) const {
 
 	return (this->str != rhs.str);
+}
+
+char *MyString::get_str() {
+
+	return str;
 }
