@@ -11,8 +11,9 @@ MyString::MyString() {
 
 // Single-arg constructor
 MyString::MyString(const char *in_str) {
-	
-	*str = *in_str;
+
+	str = new char[std::strlen(in_str) + 1];	
+	std::strcpy(str, in_str);
 }
 
 // Copy constructor
