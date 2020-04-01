@@ -17,7 +17,8 @@ MyString::MyString(const char *in_str) {
 }
 
 // Copy constructor
-MyString::MyString(const MyString &rhs) {
+MyString::MyString(const MyString &rhs) 
+	:str{nullptr} {
 
 	str = new char[std::strlen(rhs.str) + 1];
 	std::strcpy(str, rhs.str);
@@ -28,6 +29,19 @@ MyString::MyString(MyString &&rhs) {
 
 	str = rhs.str;
 	rhs.str = nullptr;
+}
+
+// Copy assignment
+MyString &MyString::operator=(const MyString &rhs) {
+	
+	if(this == &rhs) {
+	
+		return *this;
+	}
+	delete [] this->str;
+	str = new char[std::strlen(rhs.str) + 1];
+	std::strcpy(this->str, rhs.str);
+	return *this;
 }
 
 // Equality
