@@ -24,5 +24,8 @@ public:
 	MyString operator*(const MyString &rhs) const;
 	MyString operator*=(const MyString &rhs) const;
 
+	std::ostream operator<<(const MyString &rhs) const;
+	std::istream operator>>(const MyString &rhs) const;
+
 	char *get_str() const;
 };
