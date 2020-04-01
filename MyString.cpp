@@ -49,6 +49,16 @@ std::ostream &operator<<(std::ostream &os, const MyString &rhs) {
 	return os;	
 }
 
+// Output stream
+std::istream &operator>>(std::istream &is, MyString &rhs) {
+
+	char *buff = new char[1000];
+	is >> buff;
+	rhs = MyString{buff};
+	delete [] buff;
+	return is;
+}
+
 char *MyString::get_str() const {
 
 	return str;

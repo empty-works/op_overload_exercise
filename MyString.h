@@ -6,7 +6,7 @@
 class MyString {
 
 	friend std::ostream &operator<<(std::ostream &os, const MyString &rhs);
-	friend std::istream &operator>>(std::istream &is, const MyString &rhs);
+	friend std::istream &operator>>(std::istream &is, MyString &rhs);
 private:
 	char *str {};
 public:
@@ -19,6 +19,8 @@ public:
 	// Move constructor
 	MyString(MyString &&rhs);
 
+	//TODO overload assignment operators
+
 	MyString operator-() const;
 	bool operator==(const MyString &rhs) const;
 	bool operator!=(const MyString &rhs) const;
@@ -28,7 +30,6 @@ public:
 	MyString operator+=(const MyString &rhs) const;
 	MyString operator*(const MyString &rhs) const;
 	MyString operator*=(const MyString &rhs) const;
-
 
 	char *get_str() const;
 };
