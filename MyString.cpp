@@ -42,6 +42,13 @@ bool MyString::operator!=(const MyString &rhs) const {
 	return (this->str != rhs.str);
 }
 
+// Input stream
+std::ostream &operator<<(std::ostream &os, const MyString &rhs) {
+
+	os << rhs.str;
+	return os;	
+}
+
 char *MyString::get_str() const {
 
 	return str;
