@@ -19,10 +19,10 @@ public:
 	// Move constructor
 	MyString(MyString &&rhs);
 
-	// Assignment overload
+	// Copy assignment
 	MyString &operator=(const MyString &rhs);
-
-	// TODO make destructor
+	// Move assignment
+	MyString &operator=(MyString &&rhs);
 
 	MyString operator-() const;
 	bool operator==(const MyString &rhs) const;

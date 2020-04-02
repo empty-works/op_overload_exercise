@@ -44,6 +44,18 @@ MyString &MyString::operator=(const MyString &rhs) {
 	return *this;
 }
 
+// Move assignment
+MyString &MyString::operator=(MyString &&rhs) {
+
+	if(this == &rhs) {
+	
+		return *this;
+	}	
+	this->str = rhs.str;
+	rhs.str = nullptr;
+	return *this;	
+}
+
 // Equality
 bool MyString::operator==(const MyString &rhs) const {
 
