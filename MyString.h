@@ -24,6 +24,12 @@ public:
 	// Move assignment
 	MyString &operator=(MyString &&rhs);
 
+	// Destructor
+	MyString::~MyString() {
+	
+		delete [] str;
+	}
+
 	MyString operator-() const;
 	bool operator==(const MyString &rhs) const;
 	bool operator!=(const MyString &rhs) const;
