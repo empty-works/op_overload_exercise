@@ -11,8 +11,11 @@ int main() {
 	std::cout << "Testing copy constructor..." << copy_con << std::endl;
 	MyString move_con{MyString{"Move con test"}};
 	std::cout << "Testing move constructor..." << move_con << std::endl;
-	
+		
 	// Testing for equality
-	std::cout << "Test for equality..." << (move_con == move_con) << std::endl;	
+	std::cout << "Test for equality...should be 1: " << (move_con == move_con) << std::endl;
+	// Testing for inequality
+	std::cout << "Test for inequality...should be 1: " << (move_con != copy_con) << std::endl;	
+
 	return 0;
 }
