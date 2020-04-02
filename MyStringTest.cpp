@@ -16,7 +16,7 @@ int main() {
 	MyString test_copy_1{"Temp"};
 	MyString test_copy_2{"Replace"};
 	std::cout << "Test copy 1 before assignment: " << test_copy_1 << " " << "Test copy 2: " << test_copy_2 << std::endl;
-	std::cout << "Testing copy assignment..." << (test_copy_1 = test_copy_2) << std::endl;
+	test_copy_1 = test_copy_2;
 	std::cout << "Test copy 1 after assignment: " << test_copy_1 << std::endl;
 
 	// Testing for equality

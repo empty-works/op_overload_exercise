@@ -25,10 +25,7 @@ public:
 	MyString &operator=(MyString &&rhs);
 
 	// Destructor
-	MyString::~MyString() {
-	
-		delete [] str;
-	}
+	~MyString();
 
 	MyString operator-() const;
 	bool operator==(const MyString &rhs) const;

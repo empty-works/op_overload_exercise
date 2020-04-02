@@ -56,6 +56,12 @@ MyString &MyString::operator=(MyString &&rhs) {
 	return *this;	
 }
 
+// Destructor
+MyString::~MyString() {
+
+	delete [] str;
+}
+
 // Equality
 bool MyString::operator==(const MyString &rhs) const {
 
