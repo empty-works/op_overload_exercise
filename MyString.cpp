@@ -91,6 +91,18 @@ std::istream &operator>>(std::istream &is, MyString &rhs) {
 	return is;
 }
 
+// Less than equality
+bool MyString::operator<(const MyString &rhs) const {
+
+	return (std::strcmp(this->str, rhs.str) < 0);	
+}
+
+// Greater than equality
+bool MyString::operator>(const MyString &rhs) const {
+
+	return (std::strcmp(this->str, rhs.str) > 0);
+}
+
 char *MyString::get_str() const {
 
 	return str;

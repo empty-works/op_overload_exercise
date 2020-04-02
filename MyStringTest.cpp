@@ -23,6 +23,12 @@ int main() {
 	std::cout << "Test for equality...should be 1: " << (move_con == move_con) << std::endl;
 	// Testing for inequality
 	std::cout << "Test for inequality...should be 1: " << (move_con != copy_con) << std::endl;	
+	// Testing for less than equality
+	MyString less_con{"LESS"};
+	MyString more_con{"MUCH MORE"};
+	std::cout << less_con << " is less than " << more_con << "..." << (less_con < more_con) << std::endl;
+	// Testing for greater than equality	
+	std::cout << more_con << " is greater than " << less_con << "..." << (more_con > less_con) << std::endl;	
 
 	return 0;
 }
