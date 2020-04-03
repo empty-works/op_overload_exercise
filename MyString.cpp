@@ -103,6 +103,16 @@ bool MyString::operator>(const MyString &rhs) const {
 	return (std::strcmp(this->str, rhs.str) > 0);
 }
 
+
+MyString MyString::operator+(const MyString &rhs) const {
+
+	char *buff = new char[std::strlen(this->str) + std::strlen(rhs.str) + 1];	
+	std::strcpy(buff, this->str);
+	std::strcat(buff, rhs.str);
+	MyString newString{buff};
+	return newString;	
+}
+
 char *MyString::get_str() const {
 
 	return str;
