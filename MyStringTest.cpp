@@ -29,6 +29,7 @@ int main() {
 	std::cout << less_con << " is less than " << more_con << "..." << (less_con < more_con) << std::endl;
 	// Testing for greater than equality	
 	std::cout << more_con << " is greater than " << less_con << "..." << (more_con > less_con) << std::endl;	
-
+	// Testing +operator overload
+	std::cout << "Testing +operator..." << (less_con + more_con) << std::endl << std::endl;	
 	return 0;
 }
