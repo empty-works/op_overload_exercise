@@ -113,6 +113,12 @@ MyString MyString::operator+(const MyString &rhs) const {
 	return newString;	
 }
 
+
+MyString MyString::operator+=(const MyString &rhs) const {
+
+	return (*this + rhs);
+}
+
 char *MyString::get_str() const {
 
 	return str;

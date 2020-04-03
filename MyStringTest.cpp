@@ -30,6 +30,12 @@ int main() {
 	// Testing for greater than equality	
 	std::cout << more_con << " is greater than " << less_con << "..." << (more_con > less_con) << std::endl;	
 	// Testing +operator overload
-	std::cout << "Testing +operator..." << (less_con + more_con) << std::endl << std::endl;	
+	std::cout << "Testing +operator..." << (less_con + more_con) << std::endl << std::endl;
+	// Testing +=operator overload
+	MyString combo_con{"Left Equal"};
+	MyString left_plus{"Left Plus"};
+	MyString right_plus{"Right Plus"};
+	std::cout << combo_con << " += " << left_plus << " + " << right_plus << std::endl;
+	std::cout << (combo_con += left_plus + right_plus) << std::endl;	
 	return 0;
 }
