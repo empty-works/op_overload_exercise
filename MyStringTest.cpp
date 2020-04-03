@@ -36,6 +36,15 @@ int main() {
 	MyString left_plus{"Left Plus"};
 	MyString right_plus{"Right Plus"};
 	std::cout << combo_con << " += " << left_plus << " + " << right_plus << std::endl;
-	std::cout << (combo_con += left_plus + right_plus) << std::endl;	
+	std::cout << (combo_con += left_plus + right_plus) << std::endl;
+
+	// Testing *operator overload
+	MyString multiply_con{"Repeat"};
+	std::cout << "Multiple operator: " << multiply_con * 3 << std::endl; 
+
+	// Testing compound multiplication assignment
+	std::cout << "*=operator test..." << multiply_con << " *= " << "4" << std::endl;
+	std::cout << "*=operator answer: " << (multiply_con *= 4) << std::endl;	
+	
 	return 0;
 }

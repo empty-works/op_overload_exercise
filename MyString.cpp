@@ -119,6 +119,22 @@ MyString MyString::operator+=(const MyString &rhs) const {
 	return (*this + rhs);
 }
 
+MyString MyString::operator*(const size_t num_times) const {
+
+	char *buff = new char[(std::strlen(this->str) * num_times) + 1];
+	for(size_t i = 0; i < num_times; i++) {
+	
+		std::strcat(buff, this->str);
+	}
+	MyString newString{buff};
+	return newString;
+}
+
+MyString MyString::operator*=(const size_t num_times) const {
+
+	return (*this * num_times);
+}
+
 char *MyString::get_str() const {
 
 	return str;

@@ -34,8 +34,8 @@ public:
 	bool operator>(const MyString &rhs) const;
 	MyString operator+(const MyString &rhs) const;
 	MyString operator+=(const MyString &rhs) const;
-	MyString operator*(const MyString &rhs) const;
-	MyString operator*=(const MyString &rhs) const;
+	MyString operator*(const size_t num_times) const;
+	MyString operator*=(const size_t num_times) const;
 
 	char *get_str() const;
 };
